@@ -172,7 +172,7 @@ class LanguagePack::Helpers::BundlerWrapper
   def fetch_bundler
     return true if Dir.exists?(bundler_path)
 
-    topic("Installing bundler #{@version}")
+    topic("Installing bundler #{@version} to #{bundler_path} from #{@bundler_tar}")
     bundler_version_escape_valve!
 
     # Install directory structure (as of Bundler 2.1.4):
